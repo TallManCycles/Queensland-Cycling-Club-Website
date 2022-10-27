@@ -2,6 +2,18 @@ function contactUs() {
     const firstName = document.getElementById("first_name").value;
     document.getElementById("thankyou").innerText = `Thank you ${firstName}!, Your message has been received.
                                                                                 We will be in contact shortly.`;
+    setTimeout(onClose,2000);
+}
+
+function onModalClicked() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+
+}
+
+function onClose() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
 }
 
 function getWeather () {
@@ -34,16 +46,6 @@ function getWeather () {
     });
 }
 
-function onModalClicked() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "block";
-
-}
-
-function onClose() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
 
 getWeather();
 
