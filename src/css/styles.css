@@ -1,0 +1,319 @@
+
+/* Nav bar */
+nav .navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #3C4669;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    top: 0;
+    width: 100%;
+    }
+  
+li .navBarStyle {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px
+    }
+
+nav .navBarStyle input {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 20px
+        }
+
+li a:hover:not(#temp) {
+    background-color: #566CB3;
+    }
+  
+  /* Header */
+
+header {
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+    }
+  
+header img {
+      width: 100%;
+    }
+
+header .centered{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 1.5em;
+    }
+
+
+/* Global Properties */
+    
+h2, h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body,input,textarea, label {
+  margin: auto;
+  padding: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main & Aside Props */
+
+.flexContent {
+    display: flex;
+}
+
+main {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+
+aside {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  
+/* Photo Gallery */
+
+.photoGallery {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+    }
+
+.photoGallery img {
+    width: 235px;
+    }
+.photoGallery img:hover {
+    transform: rotate(2deg);
+}
+
+
+/* Race Calendar */
+
+/* #races {
+    border: 1px solid grey;
+    border-radius: 15px;
+} */
+
+.racecalendar {    
+    width: 100%;
+    text-align: left;
+    }
+.racecalendar tr:nth-child(odd) {
+        background-color: rgb(236, 240, 243);
+    }
+
+.racecalendar td {
+        padding-top:20px;
+        padding-bottom:20px;  
+    }
+
+
+/* Group Rides */
+
+.groupRides {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+
+/* Weather Forecast */
+
+.weather_dashboard table {
+    border: 1px solid #000000;
+    width: 100%;
+    text-align: center;
+}
+.weatherWidget {
+    width: 100%;
+    height: 300px;
+    }
+
+#tempTable {
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tempTable tr:nth-child(even) {
+    background-color: rgb(236, 240, 243);
+}
+
+#tempTable td {
+    padding-top:20px;
+    padding-bottom:20px;  
+}
+
+/* About */
+
+#about {
+    display: block;
+    text-align: center;
+}
+
+.aboutimage {
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Leaderboard */
+
+.leaderboard {
+    padding: 10px;
+    margin-bottom: 10px;
+    }
+
+.leaderboard table {    
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    }
+.leaderboard tr:nth-child(odd) {
+        background-color: white;
+    }
+.leaderboard tr:hover {
+    background-color: aliceblue;
+}
+
+/* Contact Us Sidebar */
+
+.contactus {
+        list-style-type: none;
+    }
+
+.contactuscontainer {
+    border-radius: 5px;
+    background-color: #e0e2e9;
+    padding: 20px;
+    }
+
+.contactuscontainer ul {
+    padding: 0px;
+}
+
+.contactuscontainer ul li {
+    margin-bottom: 10px;
+}
+
+input[type="text"],input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    resize: vertical;
+}
+  
+button {
+    background-color: #3C4669;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+
+  /* Footer */  
+  
+footer {
+      width: 100%;
+      text-align: center;
+      clear: left;
+      background-color: #3C4669;
+      color: white;
+      height: 50px;
+      margin: 5px;
+    }
+
+footer a:link, a:visited {
+    color: white;
+}
+  
+
+/* Media Screen Changes */
+
+@media screen and (max-width: 768px) {
+        .flexContent {
+            display: inline;
+        }
+        aside, main {
+            width: 98%;
+        }
+        header .centered{        
+            font-size: 0.7em;
+        }
+        .aboutimage {
+            display: block;
+            width: 25%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

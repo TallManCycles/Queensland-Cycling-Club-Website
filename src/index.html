@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Queensland Cycling Club</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Aaron Day">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/x-icon" href="images/logo_transparent.png">
+        <script src="scripts/script.js"></script>
+    </head>
+    <body>   
+		 <nav>
+			<ul class="navigation">
+                <li><a class="navBarStyle" id="temp"></a></li>                   
+				<li><a class="navBarStyle" href="#races">Upcoming Races</a></li>
+				<li><a class="navBarStyle" href="#rides">Group Rides</a></li>
+				<li><a class="navBarStyle" href="#recentraces">Recent Races</a></li>
+                <li><a class="navBarStyle" href="#about">About</a></li>
+                <li><a class="navBarStyle" onclick="onModalClicked()">Contact</a></li>
+			</ul>            		
+		</nav>
+        <header>
+            <img src="images/banner.gif" alt="banner">
+            <div class="centered">
+                <h1>Queensland Cycling Club</h1>
+                <p>Welcome to the home of Queensland Cycling Club - Built by cyclists for cyclists.</p>            
+            </div>  
+        </header>
+        <section class="flexContent">
+        <main>
+            <section id="recentraces" ></section>
+            <h2>Recent Races</h2>
+                <section class="photoGallery">
+				<figure>
+					<img src="images/crosscountry.jpg" alt="man riding a cross country bike up a hill">
+					<figcaption>Cross Country Regional Finals</figcaption>
+				</figure>
+				<figure>
+					<img src="images/longevent.jpg" alt="two cyclists under trees on a road">
+					<figcaption>Open Road Classic</figcaption>
+				</figure>
+                <figure>
+					<img src="images/moutain bike.jpg" alt="mountain bike in the bushland">
+					<figcaption>Open Mountain Bike Finals</figcaption>
+				</figure>
+                <figure>
+					<img src="images/roadrace.jpg" alt="cyclists handlebars at the start of a race">
+					<figcaption>Mens Open Crit Race</figcaption>
+				</figure>
+            </section>
+            <section>
+                <section id="races">
+                    <h2>Upcoming Races</h2>
+                    <table class="racecalendar">
+                        <tr>
+                            <th>Date</th>
+                            <th>Length (kms)</th>
+                            <th>Name</th>
+                            <th>More Details</th>
+                        </tr>
+                        <tr>
+                            <td>15/11/2022</td>
+                            <td>100kms</td>
+                            <td>The ultimate one day classic</td>
+                            <td>For more details <a href="#contact" onclick="onModalClicked()">contact us</a> for entry requirements.</td>
+                        </tr>
+                        <tr>
+                            <td>19/12/2022</td>
+                            <td>45kms</td>
+                            <td>Noosa Time Trial</td>
+                            <td>For more details <a href="#contact" onclick="onModalClicked()">contact us</a> for entry requirements.</td>
+                        </tr>
+                        <tr>
+                            <td>15/11/2022</td>
+                            <td>100kms</td>
+                            <td>The ultimate one day classic</td>
+                            <td>For more details <a href="#contact" onclick="onModalClicked()">contact us</a> for entry requirements.</td>
+                        </tr>
+                        <tr>
+                            <td>15/11/2022</td>
+                            <td>100kms</td>
+                            <td>The ultimate one day classic</td>
+                            <td>For more details <a href="#contact" onclick="onModalClicked()">contact us</a> for entry requirements.</td>
+                        </tr>
+                    </table>
+                </section>
+                <section id="rides">
+                    <h2>Group Rides</h2>
+                    <section class="groupRides">                        
+                        <ul>
+                            <h3>GROUP A</h3>
+                            <li><p>Average Speed: 28km/ph</p></li>
+                            <li><p>Starting Location: Under the bridge</p></li>
+                            <li><p>Time: 4:30am</p></li>
+                         </ul>
+                         <ul>
+                            <h3>GROUP B</h3>
+                            <li><p>Average Speed: 24km/ph</p></li>
+                            <li><p>Starting Location: Under the bridge</p></li>
+                            <li><p>Time: 4:50am</p></li>
+                         </ul>
+                    </section>                    
+                </section>
+
+            </section>
+            <section id="weather_dashboard">
+                <h2>Weather Forecast</h2>				
+                <h3>Today's High/Low</h3>   				
+                <table id="tempTable">
+                    <tr>
+                        <th>Min Temp (C°)</th>
+                        <th>Max Temp (C°)</th>
+                        <th>Real Feel</th>
+                        <th>Humidty</th>
+                    </tr>
+                    <tr>
+                        <td><p id="mintemp"></p></td>
+                        <td> <p id="maxtemp"></p></td>
+                        <td> <p id="feelsLike"></p></td>
+                        <td> <p id="humidty"></p></td>
+                    </tr>
+                </table>
+                <figure>
+					<iframe class="weatherWidget" title="weatherwidget" src="https://embed.windy.com/embed2.html?lat=-28.459&lon=153.023&detailLat=-28.023&detailLon=153.023&width=1000&height=1000&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=default&metricTemp=default&radarRange=-1"></iframe> 
+				</figure>
+            </section>
+            <section id="modalBox">
+                <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="onClose()">&times;</span>
+                    <section id="contact">
+                <div class="contactuscontainer">
+                <h2>Contact Us</h2>
+                <form name="contact_us" method="#">
+                        <ul class="contactus">
+                            <li>
+                                <label for="first_name">First Name:</label>
+                                <input type="text" id="first_name" name="first_name" required>
+                            </li>
+                            <li>
+                                <label for="last_name">Last Name:</label>
+                                <input type="text" id="last_name" name="last_name" required>
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </li>                                                            
+                            <li>
+                                <input type="checkbox" id="racedetails" name="racedetails"> 
+                                <label for="racedetails">Race details</label>                             
+                            </li>
+                            <li>
+                                <input type="checkbox" id="groupridedetails" name="groupridedetails"> 
+                                <label for="groupridedetails">Join a group ride</label>                             
+                            </li>
+                            <li>                                
+                                <input type="checkbox" id="complaint" name="complaint"> 
+                                <label for="complaint">Lodge a complaint</label>                             
+                            </li>
+                            <li>
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message"></textarea>
+                            </li>
+                            <li><p id="thankyou" ></p></li>
+                        </ul>
+                        <p>
+                        <button type="button" onclick="contactUs()">Submit</button>
+                        </p>
+                </form>  
+            </div>
+            </section>
+                </div>
+
+                </div>
+            </section>            
+        </main>
+        <aside>
+            <section id="about">
+                <img class="aboutimage" src="images/logo_transparent.png" alt="">
+                <h2>About Us</h2>
+                <p>Greetings, we're a cycling club dedicated to all levels of cyclists, from casual group riders to elite-level cyclists!</p>
+            </section>
+           <section id="leaderboard">
+                <div class="leaderboard">
+                <h2>This Weeks Leaderboard</h2>
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Distance</th>
+                    </tr>
+                    <tr>
+                        <td>🏆1</td>
+                        <td>Kent</td>
+                        <td>950 kms</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Anthony</td>
+                        <td>800 kms</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Maya</td>
+                        <td>500 kms</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ben</td>
+                        <td>200 kms</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Aaron</td>
+                        <td>100 kms</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Lauren</td>
+                        <td>80 kms</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Freddy</td>
+                        <td>60 kms</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Celeste</td>
+                        <td>60 kms</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Marty</td>
+                        <td>50 kms</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Luke</td>
+                        <td>10 kms</td>
+                    </tr>
+                    
+                </table>
+            </div>				
+            </section>
+            <section id="roadClosures">
+                <h2>Road Closures</h2>
+               <ul>
+                   <li><p><strong>11/11/2022 - ⚠️ Special Event</strong>, Clem Jones Tunnel, Brisbane City <a href="https://qldtraffic.qld.gov.au/">(more details)</a></p></li>
+                   <li><p><strong>19/11/2022 - ⚠️ Special Event</strong>, Albert Street, Brisbane City <a href="https://qldtraffic.qld.gov.au/">(more details)</a></p></li>
+                   <li><p><strong>20/11/2022 - ⚠️ Special Event</strong>, Albert Street <a href="https://qldtraffic.qld.gov.au/">(more details)</a></p></li>
+               </ul>
+            </section>            
+            <section id="contact">
+                <div class="contactuscontainer">
+                <h2>Contact Us</h2>
+                <form name="contact_us" method="#">
+                        <ul class="contactus">
+                            <li>
+                                <label for="first_name">First Name:</label>
+                                <input type="text" id="first_name" name="first_name" required>
+                            </li>
+                            <li>
+                                <label for="last_name">Last Name:</label>
+                                <input type="text" id="last_name" name="last_name" required>
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </li>                                                            
+                            <li>
+                                <input type="checkbox" id="racedetails" name="racedetails"> 
+                                <label for="racedetails">Race details</label>                             
+                            </li>
+                            <li>
+                                <input type="checkbox" id="groupridedetails" name="groupridedetails"> 
+                                <label for="groupridedetails">Join a group ride</label>                             
+                            </li>
+                            <li>                                
+                                <input type="checkbox" id="complaint" name="complaint"> 
+                                <label for="complaint">Lodge a complaint</label>                             
+                            </li>
+                            <li>
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message"></textarea>
+                            </li>
+                            <li><p id="thankyou" ></p></li>
+                        </ul>
+                        <p>
+                        <button type="button" onclick="contactUs()">Submit</button>
+                        </p>
+                </form>  
+            </div>
+            </section>
+        </aside>
+    </section>
+        <footer>
+            <address>
+                <a href="#contact" onclick="onModalClicked()"">Contact Us</a>
+            </address>
+            <small> &copy; 2022 Queensland Cycling Club</small>
+        </footer>
+    </body>
+</html>
