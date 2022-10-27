@@ -254,7 +254,7 @@ footer {
       margin: 5px;
     }
 
-footer a:link, a:visited {
+footer a:link, footer a:visited {
     color: white;
 }
   
