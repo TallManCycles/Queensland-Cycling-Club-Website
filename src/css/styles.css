@@ -296,6 +296,12 @@ footer a:link, footer a:visited {
             margin-left: auto;
             margin-right: auto;
         }
+        .photoGallery {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
     }
 
 
