@@ -283,6 +283,7 @@ footer a:link, footer a:visited {
 .modal {
     display: none;
     position: fixed;
+    overflow: auto;
     z-index: 1;
     left: 0;
     top: 0;
