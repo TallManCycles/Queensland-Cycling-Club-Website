@@ -218,6 +218,15 @@ aside {
     background-color: aliceblue;
 }
 
+/* Video  */
+
+.cyclingSafety {
+    width: 100%;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Contact Us Sidebar */
 
 .contactus {
