@@ -62,28 +62,28 @@
                             <th>More Details</th>
                         </tr>
                         <tr>
-                            <td>15/11/2022</td>
+                            <td>15/12/2022</td>
                             <td>100kms</td>
                             <td>The ultimate one day classic</td>
-                            <td>For more details <a href="#contact" onclick="onModalClicked()">contact us</a> for entry requirements.</td>
+                            <td>For more details <a href="#contact" onclick="onModalClicked('Upcoming Races')">contact us</a> for entry requirements.</td>
                         </tr>
                         <tr>
                             <td>19/12/2022</td>
                             <td>45kms</td>
                             <td>Noosa Time Trial</td>
-                            <td>For more details <a href="#contact" onclick="onModalClicked()">contact us</a> for entry requirements.</td>
+                            <td>For more details <a href="#contact" onclick="onModalClicked('Upcoming Races')">contact us</a> for entry requirements.</td>
                         </tr>
                         <tr>
-                            <td>15/11/2022</td>
+                            <td>15/12/2022</td>
                             <td>100kms</td>
                             <td>The ultimate one day classic</td>
-                            <td>For more details <a href="#contact" onclick="onModalClicked()">contact us</a> for entry requirements.</td>
+                            <td>For more details <a href="#contact" onclick="onModalClicked('Upcoming Races')">contact us</a> for entry requirements.</td>
                         </tr>
                         <tr>
-                            <td>15/11/2022</td>
+                            <td>15/12/2022</td>
                             <td>100kms</td>
                             <td>The ultimate one day classic</td>
-                            <td>For more details <a href="#contact" onclick="onModalClicked()">contact us</a> for entry requirements.</td>
+                            <td>For more details <a href="#contact" onclick="onModalClicked('Upcoming Races')">contact us</a> for entry requirements.</td>
                         </tr>
                     </table>
                 </section>
@@ -95,12 +95,14 @@
                             <li><p>Average Speed: 28km/ph</p></li>
                             <li><p>Starting Location: Under the bridge</p></li>
                             <li><p>Time: 4:30am</p></li>
+                            <li><button onclick="onModalClicked('Register For Group A')">Join This Ride</button></li>
                          </ul>
                          <ul class="slowerGroup">
                             <h3>GROUP B</h3>
                             <li><p>Average Speed: 24km/ph</p></li>
                             <li><p>Starting Location: Under the bridge</p></li>
                             <li><p>Time: 4:50am</p></li>
+                            <li><button onclick="onModalClicked('Register For Group B')">Join This Ride</button></li>
                          </ul>
                     </section>                    
                 </section>
@@ -133,7 +135,7 @@
                     <span class="close" onclick="onClose()">&times;</span>
                     <section id="contact">
                 <div class="contactuscontainer">
-                <h2>Contact Us</h2>
+                <h2 id="modalTitle" >Contact Us</h2>
                 <form name="contact_us" method="#">
                         <ul class="contactus">
                             <li>
@@ -182,6 +184,7 @@
                 <img class="aboutimage" src="images/logo_transparent.png" alt="">
                 <h2>About Us</h2>
                 <p>Greetings, we're a cycling club dedicated to all levels of cyclists, from casual group riders to elite-level cyclists!</p>
+                <p>Want to know more? <a href="#" onclick="onModalClicked()" >Contact Us.</a></p>
             </section>
            <section id="leaderboard">
                 <div class="leaderboard">
@@ -249,9 +252,9 @@
             <section id="roadClosures">
                 <h2>Road Closures</h2>
                <ul>
-                   <li><p><strong>11/11/2022 - ⚠️ Special Event</strong>, Clem Jones Tunnel, Brisbane City <a href="https://qldtraffic.qld.gov.au/">(more details)</a></p></li>
-                   <li><p><strong>19/11/2022 - ⚠️ Special Event</strong>, Albert Street, Brisbane City <a href="https://qldtraffic.qld.gov.au/">(more details)</a></p></li>
-                   <li><p><strong>20/11/2022 - ⚠️ Special Event</strong>, Albert Street <a href="https://qldtraffic.qld.gov.au/">(more details)</a></p></li>
+                   <li><p><strong>11/12/2022 - ⚠️ Special Event</strong>, Clem Jones Tunnel, Brisbane City <a href="https://qldtraffic.qld.gov.au/" target="_blank">(more details)</a></p></li>
+                   <li><p><strong>19/12/2022 - ⚠️ Special Event</strong>, Albert Street, Brisbane City <a href="https://qldtraffic.qld.gov.au/" target="_blank">(more details)</a></p></li>
+                   <li><p><strong>20/12/2022 - ⚠️ Special Event</strong>, Albert Street <a href="https://qldtraffic.qld.gov.au/" target="_blank">(more details)</a></p></li>
                </ul>
             </section>
             <section id="video">

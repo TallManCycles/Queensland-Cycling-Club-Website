@@ -5,7 +5,10 @@ function contactUs() {
     setTimeout(onClose,2000);
 }
 
-function onModalClicked() {
+function onModalClicked(title) {
+    if (title) {
+        document.getElementById("modalTitle").innerText = title;
+    }
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
 
